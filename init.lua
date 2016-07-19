@@ -102,11 +102,11 @@ minetest.register_entity("painting:picent", {
 		local meta = minetest.get_meta(pos)
 		local data = meta:get_string("painting:picturedata")
 
-		data = minetest.deserialize(data)
-
 		if not data then
 			return
 		end
+
+		data = minetest.deserialize(data)
 
 		if not data.grid then
 			return
