@@ -104,6 +104,10 @@ minetest.register_entity("painting:picent", {
 
 		data = minetest.deserialize(data)
 
+		if not data then
+			return
+		end
+
 		if not data.grid then
 			return
 		end
